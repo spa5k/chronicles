@@ -1,4 +1,4 @@
-use std::{fs::File, path::Path};
+use std::path::Path;
 
 use extractor::{rar::extract_rar, tar::extract_tar, zip::extract_zip};
 
@@ -50,7 +50,7 @@ mod tests {
     #[test]
     fn test_tar() {
         // Path to hitmo.tar
-        let file = path::Path::new("node.tar.gz");
+        let file = path::Path::new("18.3.0.tar.xz");
         // Path to extract to
         let to = path::Path::new("./extracted");
         let res = extract(file, to);

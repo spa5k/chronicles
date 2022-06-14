@@ -1,5 +1,7 @@
 {
-  "conventionalCommits.scopes": [],
+  "conventionalCommits.scopes": [
+    "archive"
+  ],
   "rust-analyzer.checkOnSave.command": "clippy",
   "editor.defaultFormatter": "dprint.dprint",
   "editor.formatOnSave": true,
