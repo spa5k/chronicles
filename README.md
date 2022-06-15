@@ -6,24 +6,25 @@
 - [Tar](https://www.gnu.org/software/tar/)
 - [Gz](https://www.gnu.org/software/gzip/)
 
-## Todo -
-
-- Support conversion between files.
-- Support async operations.
-
 ## How to use -
 
 ```rust
 use chronicles::extract;
 
 let file = path::Path::new("someZip.zip");
-      // Path to extract to
+// Path to extract to
 let to = path::Path::new("./extracted");
 let res = extract(file, to);
 ```
 
 ## Supported extensions -
 
-    - `.zip`
-    - `.tar.gz`
-    - `.tar.xz`
+- `.zip`
+- `.tar.gz`
+- `.tar.xz`
+
+## Todo -
+
+- Support conversion between files.
+- Support async operations.
+- More formats.
