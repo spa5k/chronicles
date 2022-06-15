@@ -3,7 +3,7 @@
 pub enum ArchiveType {
     Zip,
     Tar,
-    Rar,
+    Gzip,
 }
 
 pub fn handler(r#type: &str) -> Result<ArchiveType, anyhow::Error> {
@@ -11,8 +11,7 @@ pub fn handler(r#type: &str) -> Result<ArchiveType, anyhow::Error> {
         "zip" => Ok(ArchiveType::Zip),
         "xz" => Ok(ArchiveType::Tar),
         "tz" => Ok(ArchiveType::Tar),
-        "gz" => Ok(ArchiveType::Tar),
-        "rar" => Ok(ArchiveType::Rar),
+        "gz" => Ok(ArchiveType::Gzip),
         _ => Err(anyhow::anyhow!("Unknown file type")),
     }
 }
